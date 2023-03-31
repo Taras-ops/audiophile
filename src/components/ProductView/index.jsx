@@ -42,13 +42,9 @@ const ProductView = ({ data, productPage, order }) => {
     }
 
     dispatch(addToCart(product))
+    localStorage.setItem('cartProducts', product)
+    console.log(localStorage.getItem('cartProducts'))
   }
-
-  let windowWidth = window.innerWidth
-
-  window.addEventListener('resize', () => {
-    windowWidth = window.innerWidth
-  })
 
 
   return (
